@@ -1,0 +1,451 @@
+@import "_nullstyle";
+//------------------- Fonts -------------------//
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/MYRIADPRO-REGULAR.eot');
+	src: local('☺'), url('../fonts/MYRIADPRO-REGULAR.woff') format('woff'), url('../fonts/MYRIADPRO-REGULAR.ttf') format('truetype'), url('../fonts/MYRIADPRO-REGULAR.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+//------------------- Basis Class -------------------//
+.wrapper {width: 100%; min-height: 100vh; overflow: hidden;}
+.container {max-width: 1100px; margin: 0 auto;}
+body {font-family: Lato;}
+input {background-color: #f8f7f7; border-top: 1px solid #000; width: 160px; height: 35px; font-size: 16px; font-weight: 600; padding-left: 5px;}
+textarea {background-color: #f8f7f7; border-top: 1px solid #000; resize: none; width: 380px; height: 120px; font-size: 16px; font-weight: 600; padding-left: 5px;}
+button {font-size: 14px; background-color: #fff; font-weight: 600;}
+//------------------- Independent Class -------------------//
+.btn {padding: 15px 40px; letter-spacing: 2px;}
+.btn-w {color: #fff; border: 1px solid #fff;}
+.btn-b {color: #000; border: 1px solid #000;}
+.link {font-size: 15px; font-weight: 600; color: #3c3c3c;
+   &:hover {color: #ada074;}
+}
+.link-active {color: #ada074;}
+.title {font-size: 34px; font-weight: 600; letter-spacing: 4px; text-align: center; position: relative;
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(50% - 40px);
+      width: 80px;
+      height: 1px;
+      background-color: #000;
+      margin-top: 65px;
+   }
+}
+//------------------- Main Block -------------------//
+.main {
+   min-height: 100vh;
+   background: url('../img/main/bg.png') 0 0 no-repeat;
+
+   &__body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+   }
+
+   &__logo {
+   }
+
+   &__text {
+      color: #fff;
+      text-align: center;
+      letter-spacing: 4px;
+      &::after {
+         content: '';
+         display: inline-block;
+         width: 105px;
+         height: 2px;
+         background-color: #fff;
+         margin-top: 50px;
+      }
+   }
+
+   &__title {
+      font-size: 34px;
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 40px;
+   }
+
+   &__subtitle {
+      font-size: 26px;
+      line-height: 40px;
+   }
+
+   &__footer {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+   }
+
+   &__btn {
+      margin-bottom: 70px;
+   }
+
+   &__arrow {
+   }
+}
+//------------------- Menu Block -------------------//
+.menu {
+   border-bottom: 1px solid #f2f2f2;
+
+   &__body {
+   }
+
+   &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+      li {
+         margin: 20px 25px;
+         @media screen and (max-width: 425px) {
+            margin: 20px 10px;
+         }
+         @media screen and (max-width: 320px) {
+            margin: 15px 35px;
+         }
+      }
+   }
+
+   &__link {
+   }
+}
+//------------------- About Block -------------------//
+.about {
+   padding-top: 130px;
+   @media screen and (max-width: 768px) {
+      padding-top: 50px;
+   }
+
+   &__body {
+   }
+
+   &__title {
+      margin-bottom: 75px;
+   }
+
+   &__text {
+      max-width: 690px;
+      margin: 0 auto;
+      padding: 0 20px;
+      font-weight: 300;
+      line-height: 26px;
+      color: #868585;
+      text-align: center;
+   }
+
+   &__row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 100px;
+   }
+
+   &__column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 285px;
+      margin: 0 15px 100px 15px;
+      @media screen and (max-width: 768px) {
+         margin: 0 15px 70px 15px;
+      }
+   }
+
+   &__icon {
+      position: relative;
+      &::after {
+         content: '';
+         position: absolute;
+         width: 92px;
+         height: 92px;
+         border: 2px solid #f0f0f0;
+         border-radius: 50%;
+         top: calc(50% - 46px);
+         left: calc(50% - 46px);
+      }
+   }
+
+   &__label {
+      font-size: 22px;
+      letter-spacing: 4px;
+      margin: 70px 0 30px 0;
+      @media screen and (max-width: 768px) {
+         margin: 50px 0 15px 0;
+      }
+   }
+
+   &__description {
+      font-weight: 300;
+      line-height: 26px;
+      color: #868585;
+   }
+}
+//------------------- Portfolio Block -------------------//
+.portfolio {
+   padding-top: 110px;
+   background-color: #f3f3f3;
+   @media screen and (max-width: 768px) {
+      padding-top: 60px;
+   }
+
+   &__body {
+   }
+
+   &__title {
+   }
+
+   &__menu {
+      margin: 50px 0 130px 0;
+      @media screen and (max-width: 768px) {
+         margin: 50px 0 50px 0;
+      }
+   }
+
+   &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+      li {
+         margin: 20px 25px;
+         @media screen and (max-width: 425px) {
+            margin: 20px 15px;
+         }
+      }
+   }
+
+   &__link {
+   }
+
+   &__images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -15px;
+      @media screen and (max-width: 1100px) {
+         margin: 0;
+      }
+   }
+
+   &__image {
+      width: 535px;
+      margin: 10px 15px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__footer {
+      padding: 55px 0 60px 0;
+      text-align: center;
+   }
+
+   &__btn {
+   }
+}
+//------------------- Partners Block -------------------//
+.partners {
+   background: url('../img/partners/bg.png') center no-repeat;
+
+   &__body {
+      padding: 100px 0;
+   }
+
+   &__title {
+      text-align: center;
+      font-size: 31px;
+      font-weight: 300;
+      color: #fff;
+      letter-spacing: 2px;
+      padding-bottom: 100px;
+   }
+
+   &__row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 600px;
+      margin: 0 auto;
+   }
+
+   &__logo {
+   }
+}
+//------------------- Contacts Block -------------------//
+.contacts {
+   padding: 180px 0 100px 0;
+   @media screen and (max-width: 768px) {
+      padding: 80px 0 100px 0;
+   }
+
+   &__title {
+      margin-bottom: 160px;
+      @media screen and (max-width: 768px) {
+         margin-bottom: 100px;
+      }
+   }
+
+   &__row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   &__form {
+      max-width: 380px;
+      margin-right: 70px;
+      @media screen and (max-width: 768px) {
+         margin-right: 0px;
+      }
+   }
+
+   &__column {
+      max-width: 265px;
+      padding: 0 15px;
+      @media screen and (max-width: 768px) {
+         margin-top: 45px;
+      }
+   }
+
+   &__form-contact {
+   }
+
+   &__contact {
+   }
+
+   &__text {
+      font-weight: 300;
+      line-height: 26px;
+      margin-bottom: 40px;
+   }
+
+   &__name {
+      font-weight: 600;
+      margin-bottom: 30px;
+   }
+
+   &__links {
+      margin-bottom: 20px;
+   }
+
+   &__link {
+      position: relative;
+      margin-left: 25px;
+      &:first-child {
+         margin-left: 5px;
+      }
+      &::after {
+         content: '';
+         position: absolute;
+         width: 28px;
+         height: 28px;
+         border: 2px solid #000;
+         border-radius: 50%;
+         top: calc(50% - 14px);
+         left: calc(50% - 14px);
+      }
+   }
+
+   &__email {
+      font-weight: 300;
+      a {
+         font-weight: 600;
+         color: #000;
+      }
+   }
+}
+.form-contact {
+
+   &__body {
+      font-weight: 600;
+   }
+
+   &__row {
+      display: flex;
+      margin: 0 -30px;
+      @media screen and (max-width: 425px) {
+         justify-content: center;
+         margin: 0;
+      }
+   }
+
+   &__item {
+      margin: 0 30px;
+      @media screen and (max-width: 425px) {
+         margin: 0 10px;
+      }
+      @media screen and (max-width: 320px) {
+         input {
+            width: 140px;
+         }
+      }
+   }
+
+   &__label {
+      margin-bottom: 20px;
+   }
+
+   &__input {
+      margin-bottom: 70px;
+   }
+
+   &__message {
+      @media screen and (max-width: 425px) {
+         text-align: center;
+      }
+      @media screen and (max-width: 375px) {
+         text-align: center;
+         textarea {
+            width: 310px;
+         }
+      }
+   }
+
+   &__btn {
+      text-align: right;
+      margin-top: 40px;
+      @media screen and (max-width: 425px) {
+         text-align: center;
+      }
+   }
+}
+//------------------- Footer Block -------------------//
+.footer {
+   background-color: #3c3c3c;
+   padding: 50px 0;
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__logo {
+      margin-bottom: 40px;
+   }
+
+   &__links {
+      display: flex;
+      margin-bottom: 30px;
+   }
+
+   &__link {
+      color: #a4a4a4;
+      margin: 0 10px;
+   }
+
+   &__copyright {
+      color: #6c6c6c;
+      font-family: 'Myriad Pro';
+   }
+}
